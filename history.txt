@@ -1,0 +1,60 @@
+    1  la
+    2  ls
+    3  ls -al
+    4  mkdir last name
+    5  ls
+    6  ls -al
+    7  mkdir HONRADA
+    8  cd documents
+    9  cd HONRADA
+   10  mkdir HONRADA
+   11  cd HONRADA
+   12  LS
+   13  ls
+   14  touch text.txt
+   15  ls
+   16  git push -u origin main
+   17  git remote add origin
+   18  git remote add origin https://github.com/dchonrada-beep/HONRADA.git
+   19  git push - u origin https://github.com/dchonrada-beep/HONRADA.git
+   20  git push -u origin main
+   21  git add
+   22  git branch
+   23  git branch -M main
+   24  git remote add origin https://github.com/dchonrada-beep/HONRADA.git
+   25  ls
+   26  LS
+   27  git commit -m "first commit"
+   28  ls
+   29  mkdir HONRADA
+   30  cd honrada
+   31  mkdir honrada
+   32  touch text. txt
+   33  git init
+   34  git status
+   35  git add
+   36  ls
+   37  git status
+   38  git add
+   39  ls
+   40  mkdir HONRADA
+   41  LS
+   42  cd document
+   43  cd documents
+   44  cd HONRADA
+   45  mkdir HONRADA
+   46  cd HONRADA
+   47  touch text.txt
+   48  ls
+   49  git remote add origin
+   50  git remote add origin https://github.com/dchonrada-beep/HONRADA.git
+   51  git init
+   52  git clone https://github.com/dchonrada-beep/HONRADA.git
+   53  ls
+   54  cd honrada
+   55  cd ..
+   56  cd HONRADA
+   57  ls
+   58  touch history.txt
+   59  start history.txt
+   60  history
