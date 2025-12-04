@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="theme-toggle">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </div>
+        
+        <h1 class="calculator-title">
+            <span class="title-sub">CALCULATOR</span>
+        </h1>
+        
+        <div class="calculator">
+            <div class="display-container">
+                <div class="expression" id="expression"></div>
+                <input type="text" id="result" readonly>
+                <div class="display-overlay"></div>
+            </div>
+            
+            <div class="buttons">
+                <button onclick="clearDisplay()" class="btn clear" data-action="clear">
+                    <i class="fas fa-broom"></i>
+                </button>
+                <button onclick="deleteLast()" class="btn operator" data-action="delete">
+                    <i class="fas fa-backspace"></i>
+                </button>
+                <button onclick="appendToDisplay('/')" class="btn operator" data-action="divide">
+                    <i class="fas fa-divide"></i>
+                </button>
+                <button onclick="appendToDisplay('*')" class="btn operator" data-action="multiply">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <button onclick="appendToDisplay('7')" class="btn number" data-value="7">7</button>
+                <button onclick="appendToDisplay('8')" class="btn number" data-value="8">8</button>
+                <button onclick="appendToDisplay('9')" class="btn number" data-value="9">9</button>
+                <button onclick="appendToDisplay('-')" class="btn operator" data-action="subtract">
+                    <i class="fas fa-minus"></i>
+                </button>
+                
+                <button onclick="appendToDisplay('4')" class="btn number" data-value="4">4</button>
+                <button onclick="appendToDisplay('5')" class="btn number" data-value="5">5</button>
+                <button onclick="appendToDisplay('6')" class="btn number" data-value="6">6</button>
+                <button onclick="appendToDisplay('+')" class="btn operator" data-action="add">
+                    <i class="fas fa-plus"></i>
+                </button>
+                
+                <button onclick="appendToDisplay('1')" class="btn number" data-value="1">1</button>
+                <button onclick="appendToDisplay('2')" class="btn number" data-value="2">2</button>
+                <button onclick="appendToDisplay('3')" class="btn number" data-value="3">3</button>
+                <button onclick="calculate()" class="btn equals" data-action="equals">
+                    <i class="fas fa-equals"></i>
+                </button>
+                
+                <button onclick="appendToDisplay('0')" class="btn number zero" data-value="0">0</button>
+                <button onclick="appendToDisplay('.')" class="btn number" data-action="decimal">.</button>
+                <button onclick="toggleScientific()" class="btn scientific-toggle" id="sci-toggle">
+                    <i class="fas fa-flask"></i>
+                </button>
+            </div>
+            
+            <div class="scientific-panel" id="scientific-panel">
+                <button onclick="appendToDisplay('(')" class="btn sci-operator">(</button>
+                <button onclick="appendToDisplay(')')" class="btn sci-operator">)</button>
+                <button onclick="appendToDisplay('Math.PI')" class="btn sci-operator">π</button>
+                <button onclick="appendToDisplay('Math.E')" class="btn sci-operator">e</button>
+                <button onclick="appendToDisplay('**')" class="btn sci-operator">x^y</button>
+                <button onclick="appendToDisplay('Math.sqrt(')" class="btn sci-operator">√</button>
+                <button onclick="appendToDisplay('Math.sin(')" class="btn sci-operator">sin</button>
+                <button onclick="appendToDisplay('Math.cos(')" class="btn sci-operator">cos</button>
+                <button onclick="appendToDisplay('Math.tan(')" class="btn sci-operator">tan</button>
+                <button onclick="appendToDisplay('Math.log(')" class="btn sci-operator">ln</button>
+                <button onclick="appendToDisplay('Math.log10(')" class="btn sci-operator">log</button>
+                <button onclick="appendToDisplay('**2')" class="btn sci-operator">x²</button>
+            </div>
+            
+            <div class="calculator-footer">
+                <div class="history-toggle" id="history-toggle">
+                    <i class="fas fa-history"></i>
+                </div>
+                <div class="memory-indicator" id="memory-indicator">
+                    <i class="fas fa-memory"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="history-panel" id="history-panel">
+            <div class="history-header">
+                <h3>Calculation History</h3>
+                <button class="clear-history" onclick="clearHistory()">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+            <div class="history-list" id="history-list"></div>
+        </div>
+    </div>
+    
+    <div class="particles-container" id="particles"></div>
+    
+    <script src="calculator.js"></script>
+</body>
+</html>
